@@ -12,6 +12,8 @@ const __dirname = path.dirname(__filename)
 let uping = false
 
 export class McsmRestart extends plugin {
+  typeName = 'TRSS-Yunzai'
+
   constructor() {
     super({
       name: 'MCSM-自管理',
