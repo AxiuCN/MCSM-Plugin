@@ -1,0 +1,16 @@
+# 依赖
+node_modules/
+
+# 运行时配置（.example 为参考模板）
+config/config.yaml
+config/mc-server.yaml
+
+# 用户数据
+data/
+
+# 临时文件
+resources/mcsmanager/temp/
+
+# Claude Code 工作区
+.claude/
+CLAUDE.md

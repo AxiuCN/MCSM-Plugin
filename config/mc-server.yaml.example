@@ -1,0 +1,6 @@
+# MC 服务器列表（参考文件，复制为 mc-server.yaml 后修改）
+servers:
+  - name: '示例服务器'
+    host: 'mc.example.com'
+    port: 25565
+    type: 'java'  # java | bedrock

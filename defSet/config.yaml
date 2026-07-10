@@ -1,0 +1,14 @@
+# MCSM-Plugin 配置模板（锅巴保存时使用）
+# 变量名用下划线，由 guoba/index.js 中的 setConfigData 做模板替换
+
+restart:
+  enableMcsm: ${restart_enableMcsm}
+  mcsmHost: ${restart_mcsmHost}
+  mcsmPort: ${restart_mcsmPort}
+  mcsmApiKey: ${restart_mcsmApiKey}
+  mcsmInstanceUuid: ${restart_mcsmInstanceUuid}
+  mcsmDaemonId: ${restart_mcsmDaemonId}
+  restartCron: ${restart_restartCron}
+
+bind:
+  dataDir: ${bind_dataDir}

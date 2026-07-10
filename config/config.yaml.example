@@ -1,0 +1,16 @@
+# MCSM-Plugin 配置参考
+# 复制为 config.yaml 后修改
+
+# ===== Yunzai 自管理（通过 MCSM 面板重启/更新）=====
+restart:
+  enableMcsm: false
+  mcsmHost: '127.0.0.1'
+  mcsmPort: 23333
+  mcsmApiKey: ''
+  mcsmInstanceUuid: ''
+  mcsmDaemonId: ''
+  restartCron: []
+
+# ===== 用户面板绑定默认值 =====
+bind:
+  dataDir: ''

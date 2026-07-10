@@ -1,0 +1,8 @@
+{
+  "name": "mcsm-plugin",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "MCSManager + Minecraft 综合管理插件",
+  "author": "Axiu",
+  "license": "GPL-3.0"
+}
