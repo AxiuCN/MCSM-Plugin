@@ -1,6 +1,6 @@
 # MCSM-Plugin
 
-基于 Yunzai-Bot v3 的 MCSManager + Minecraft 综合管理插件。合并了 Axiu-Plugin（面板重启/更新）、mcsmanager-plugin（实例/用户管理）、mctool-plugin（节点/文件/MC 服务器）的功能，统一代码风格与数据存储。
+基于 Yunzai-Bot v3 的 MCSManager + Minecraft 综合管理插件。
 
 ## 功能
 
@@ -18,7 +18,7 @@
 1. 在 Yunzai-Bot 根目录下执行：
 
 ```bash
-git clone <仓库地址> ./plugins/MCSM-Plugin/
+git clone --depth=1 https://github.com/AxiuCN/MCSM-Plugin ./plugins/MCSM-Plugin/
 ```
 
 2. 无需额外安装依赖（使用 Node 18+ 内置 `fetch`，puppeteer/art-template/yaml 由框架提供）

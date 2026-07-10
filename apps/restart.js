@@ -77,12 +77,13 @@ export class McsmRestart extends plugin {
       return 'return'
     }
     // #更新 / #强制更新 / #更新日志
-    if (/^#(安?静)?(强制)?更新/.test(e.msg)) {
+    if (/^#(安?静)?(强制)?更新(\s|$|日志)/.test(e.msg)) {
       if (e.msg.includes('日志')) {
         await this.updateLog(e)
       } else {
         if (!e.isMaster) return false
-        await this.update(e)
+        const ret = await this.update(e)
+        if (ret === false) return false
       }
       return 'return'
     }
@@ -136,7 +137,7 @@ export class McsmRestart extends plugin {
 
   async runUpdate(plugin = '') {
     let cm = 'git pull'
-    if (!plugin) cm = `git checkout package.json && ${cm}`
+    if (!plugin) cm = `git checkout package.json pnpm-workspace.yaml && ${cm}`
 
     if (this.e.msg.includes('强制')) {
       cm = `git reset --hard ${await this.getRemoteBranch(true, plugin)} && git pull --rebase`
