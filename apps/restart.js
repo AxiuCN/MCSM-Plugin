@@ -79,7 +79,9 @@ export class McsmRestart extends plugin {
       return 'return'
     }
     // #更新 / #强制更新 / #更新日志
-    if (/^#(安?静)?(强制)?更新(\s|$|日志)/.test(e.msg)) {
+    if (/^#(安?静)?(强制)?更新/.test(e.msg)) {
+      // 排除喵喵面板指令（#更新面板 / #全部面板更新 等）
+      if (/面板/.test(e.msg)) return
       if (e.msg.includes('日志')) {
         await this.updateLog(e)
       } else {
