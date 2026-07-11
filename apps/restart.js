@@ -128,6 +128,7 @@ export class McsmRestart extends plugin {
   }
 
   async getPlugin(plugin = this.e.msg.replace(/#(安?静)?(强制)?更新(日志)?/, '')) {
+    plugin = plugin.trim()
     if (!plugin) return ''
     for (const i of [plugin, `${plugin}-Plugin`, `${plugin}-plugin`])
       if (await Bot.fsStat(`plugins/${i}/.git`)) {
