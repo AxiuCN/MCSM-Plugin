@@ -73,7 +73,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="title">MCSManager 帮助</div>
+            <div class="title">MCSM-Plugin 帮助</div>
             <div class="version">作者 阿修Axiu</div>
         </div>
         <div class="commands">
@@ -95,35 +95,6 @@
                 </div>
             </div>
             <div class="command-group">
-                <div class="group-title">面板管理</div>
-                <div class="command-list">
-                    <div class="command-item">
-                        <div class="command-name">#mcsm概览</div>
-                        <div class="command-desc">查看面板概览信息</div>
-                    </div>
-                    <div class="command-item">
-                        <div class="command-name">#mcsm用户列表 [页码]</div>
-                        <div class="command-desc">查看用户列表</div>
-                    </div>
-                    <div class="command-item">
-                        <div class="command-name">#mcsm创建用户 <用户名> <密码> <权限级别></div>
-                        <div class="command-desc">创建新用户</div>
-                    </div>
-                    <div class="command-item">
-                        <div class="command-name">#mcsm删除用户 <用户名> <用户ID></div>
-                        <div class="command-desc">删除指定用户</div>
-                    </div>
-                    <div class="command-item">
-                        <div class="command-name">#mcsm修改权限 <用户名> <新权限级别></div>
-                        <div class="command-desc">修改用户权限</div>
-                    </div>
-                    <div class="command-item">
-                        <div class="command-name">#mcsm重置密码 <用户名> <新密码></div>
-                        <div class="command-desc">重置用户密码</div>
-                    </div>
-                </div>
-            </div>
-            <div class="command-group">
                 <div class="group-title">实例管理</div>
                 <div class="command-list">
                     <div class="command-item">
@@ -135,7 +106,7 @@
                         <div class="command-desc">查看所有实例</div>
                     </div>
                     <div class="command-item">
-                        <div class="command-name">#mcsm实例信息 ID [页码]</div>
+                        <div class="command-name">#mcsm实例信息 ID</div>
                         <div class="command-desc">查看实例详情</div>
                     </div>
                     <div class="command-item">
@@ -143,54 +114,70 @@
                         <div class="command-desc">控制实例状态</div>
                     </div>
                     <div class="command-item">
-                        <div class="command-name">#mcsm日志 ID 数据量KB</div>
+                        <div class="command-name">#mcsm日志 ID [数据量KB]</div>
                         <div class="command-desc">查看实例日志</div>
                     </div>
                     <div class="command-item">
-                        <div class="command-name">#mcsm命令 ID</div>
+                        <div class="command-name">#mcsm命令 ID 命令内容</div>
                         <div class="command-desc">发送控制台命令</div>
                     </div>
                 </div>
             </div>
             <div class="command-group">
-                <div class="group-title">文件管理</div>
+                <div class="group-title">MC服务器</div>
                 <div class="command-list">
                     <div class="command-item">
-                        <div class="command-name">#mcsm文件列表 <实例ID> [路径]</div>
-                        <div class="command-desc">查看实例文件列表</div>
+                        <div class="command-name">#mc添加 名称 地址 [描述]</div>
+                        <div class="command-desc">添加MC服务器到列表</div>
                     </div>
                     <div class="command-item">
-                        <div class="command-name">#mcsm下载文件 <实例ID> [路径]</div>
-                        <div class="command-desc">下载实例文件</div>
+                        <div class="command-name">#mc删除 ID</div>
+                        <div class="command-desc">从列表移除服务器</div>
+                    </div>
+                    <div class="command-item">
+                        <div class="command-name">#mc状态 / #mc列表</div>
+                        <div class="command-desc">查看服务器状态及玩家</div>
+                    </div>
+                    <div class="command-item">
+                        <div class="command-name">#mc在线</div>
+                        <div class="command-desc">查看在线玩家</div>
+                    </div>
+                    <div class="command-item">
+                        <div class="command-name">#mc motd 地址[:端口]</div>
+                        <div class="command-desc">查询服务器MOTD</div>
                     </div>
                 </div>
             </div>
             <div class="command-group">
-                <div class="group-title">节点管理</div>
+                <div class="group-title">Yunzai自管理（仅Master）</div>
                 <div class="command-list">
                     <div class="command-item">
-                        <div class="command-name">#mcsm节点列表</div>
-                        <div class="command-desc">查看所有节点</div>
+                        <div class="command-name">#重启</div>
+                        <div class="command-desc">MCSM/原生双路重启Bot</div>
                     </div>
                     <div class="command-item">
-                        <div class="command-name">#mcsm添加节点 IP 端口 API密钥 [备注]</div>
-                        <div class="command-desc">添加新节点</div>
+                        <div class="command-name">#更新 [插件名]</div>
+                        <div class="command-desc">更新Bot或指定插件</div>
                     </div>
                     <div class="command-item">
-                        <div class="command-name">#mcsm删除节点 ID</div>
-                        <div class="command-desc">删除指定节点</div>
+                        <div class="command-name">#强制更新 [插件名]</div>
+                        <div class="command-desc">强制还原并更新</div>
                     </div>
                     <div class="command-item">
-                        <div class="command-name">#mcsm连接节点 ID</div>
-                        <div class="command-desc">连接指定节点</div>
+                        <div class="command-name">#全部更新</div>
+                        <div class="command-desc">更新Bot及所有插件</div>
+                    </div>
+                    <div class="command-item">
+                        <div class="command-name">#更新日志 [插件名]</div>
+                        <div class="command-desc">查看更新日志</div>
                     </div>
                 </div>
             </div>
         </div>
 
         <div style="text-align: center; margin-top: 20px; padding: 10px; background: #fff3cd; color: #856404; border-radius: 5px;">
-            注意：必须使用MCSManager的管理员账户，并且必须手动分配实例给该管理员账户
+            注意：MCSManager 功能需使用管理员账户 API Key，且需手动分配实例给该账户
         </div>
     </div>
 </body>
-</html> 
+</html>
