@@ -121,26 +121,6 @@ export const ConfigManager = {
     return data.panels[0]
   },
 
-  /** 列出所有绑定的用户 */
-  async getAllBoundUsers() {
-    try {
-      this._ensureDataDir()
-      const files = await fs.readdir(DATA_DIR)
-      const results = []
-      for (const f of files) {
-        if (!f.endsWith('.yaml')) continue
-        const fp = path.join(DATA_DIR, f)
-        const raw = await fs.readFile(fp, 'utf-8')
-        const data = YAML.parse(raw)
-        if (data) results.push(data)
-      }
-      return results
-    } catch (err) {
-      logger.error('[MCSM][ConfigManager] 列出绑定用户失败:', err)
-      return []
-    }
-  },
-
   // ==================== MC 服务器配置 ====================
 
   _mcServerPath() {
