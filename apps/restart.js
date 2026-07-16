@@ -1,13 +1,8 @@
 import fs from 'node:fs/promises'
-import { fileURLToPath } from 'url'
-import path from 'node:path'
 import plugin from '../../../lib/plugins/plugin.js'
 import cfg from '../../../lib/config/config.js'
 import { ConfigManager } from '../components/ConfigManager.js'
 import { RestartManager } from '../modules/restart/RestartManager.js'
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
 
 let uping = false
 
@@ -111,7 +106,10 @@ export class McsmRestart extends plugin {
   }
 
   async update(e) {
-    if (e) this.e = e
+    if (e) {
+      this.e = e
+      if (!this.e.logFnc) this.e.logFnc = '[MCSM]'
+    }
     if (!this.e.isMaster) return false
     if (uping) {
       await this.e.reply('正在更新，请稍候再试')
